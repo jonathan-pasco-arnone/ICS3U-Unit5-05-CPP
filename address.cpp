@@ -9,9 +9,9 @@
 
 /* !IMPORTANT! I used std::sting in front of the name of this
   function so that the return would work */
-std::string formatter(std::string address, std::string aptNumber,
+std::string formatter(std::string address,
       std::string streetNumber, std::string streetName, std::string city,
-      std::string province, std::string postalCode) {
+      std::string province, std::string postalCode, std::string aptNumber = "None") {
     // This function formats your address appropriately
 
     std::string formatedAddress;
@@ -71,8 +71,8 @@ int main() {
     std::cin >> postalCodeInput;
     std::cout << "" << std::endl;
 
-    finalProduct = formatter(addressInput, aptNumberInput, streetNumberInput,
-          streetNameInput, cityInput, provinceInput, postalCodeInput);
+    finalProduct = formatter(addressInput, streetNumberInput,
+          streetNameInput, cityInput, provinceInput, postalCodeInput, aptNumberInput);
 
     std::cout << finalProduct << std::endl;
 }
